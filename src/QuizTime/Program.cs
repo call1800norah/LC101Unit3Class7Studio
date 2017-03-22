@@ -42,6 +42,12 @@ namespace QuizTime
             );
             quiz.AddQuestion(q5);
 
+            Question q6 = new ParagraphAnswer(
+                "Which is better: Pirates or Ninjas? Justify your reasoning in a short paragraph.",
+                "Pirates, obviously, they have rum. Q.E.D."
+            );
+            quiz.AddQuestion(q6);
+
             quiz.Run(new QuestionPrompt());
             ReportCard reportCard = quiz.Grade();
 
