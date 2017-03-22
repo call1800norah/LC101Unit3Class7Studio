@@ -28,6 +28,12 @@ namespace QuizTime
             );
             quiz.AddQuestion(q3);
 
+            Question q4 = new ShortAnswerQuestion(
+                "What is Hamlet's most famous line?",
+                "To Be or Not to Be"
+            );
+            quiz.AddQuestion(q4);
+
             quiz.Run(new QuestionPrompt());
             ReportCard reportCard = quiz.Grade();
 
