@@ -44,7 +44,7 @@ namespace QuizTime
                 {
                     flag = "unchosen";
                 }
-                sb.AppendLine(String.Format("\t{0}: {1} ({2})", i, possibleChoices[i], flag));
+                sb.AppendLine(String.Format("- {0}: {1} ({2})", i, possibleChoices[i], flag));
             }
 
             // "none of the above"
@@ -58,7 +58,7 @@ namespace QuizTime
             {
                 flag = "unchosen";
             }
-            sb.AppendLine(String.Format("\t{0}: {1} ({2})", noneOfTheAboveChoice, "None of the above", flag));
+            sb.AppendLine(String.Format("- {0}: {1} ({2})", noneOfTheAboveChoice, "None of the above", flag));
 
             return sb.ToString();
         }

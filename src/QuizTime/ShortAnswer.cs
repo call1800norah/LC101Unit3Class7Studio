@@ -27,7 +27,7 @@ namespace QuizTime
             sb.AppendLine("Answer the following question with a short answer.")
                 .AppendLine("Your answer MUST be 80 characters or less, or you WILL be asked again.")
                 .AppendLine()
-                .Append("\t").Append(Text).AppendLine()
+                .Append("    ").Append(Text).AppendLine()
                 .AppendLine();
 
             return sb.ToString();
@@ -44,6 +44,11 @@ namespace QuizTime
 
         public override bool IsCorrect()
         {
+            if (!hasAnswered)
+            {
+                return false;
+            }
+
             int comparison = String.Compare(
                 correctAnswer,
                 userAnswer,

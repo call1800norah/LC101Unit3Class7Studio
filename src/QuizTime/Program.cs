@@ -28,11 +28,19 @@ namespace QuizTime
             );
             quiz.AddQuestion(q3);
 
-            Question q4 = new ShortAnswerQuestion(
+            Question q4 = new ShortAnswer(
                 "What is Hamlet's most famous line?",
                 "To Be or Not to Be"
             );
             quiz.AddQuestion(q4);
+
+            Question q5 = new LinearScale(
+                "How much wood could a woodchuck chuck if a woodchuck could chuck wood?",
+                1,
+                10,
+                7
+            );
+            quiz.AddQuestion(q5);
 
             quiz.Run(new QuestionPrompt());
             ReportCard reportCard = quiz.Grade();

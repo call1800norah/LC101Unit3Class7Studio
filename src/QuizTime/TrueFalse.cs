@@ -23,8 +23,8 @@ namespace QuizTime
                 .AppendLine("Choose ONE of the answers below.")
                 .AppendLine();
 
-            sb.AppendLine(String.Format("\t{0}: {1}", 0, "false"));
-            sb.AppendLine(String.Format("\t{0}: {1}", 1, "true"));
+            sb.AppendLine(String.Format("- {0}: {1}", 0, "false"));
+            sb.AppendLine(String.Format("- {0}: {1}", 1, "true"));
 
             return sb.ToString();
         }

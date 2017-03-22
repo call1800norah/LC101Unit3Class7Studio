@@ -26,7 +26,7 @@ namespace QuizTime
 
             for (int i = 0; i < possibleChoices.Length; i += 1)
             {
-                sb.AppendLine(String.Format("\t{0}: {1}", i, possibleChoices[i]));
+                sb.AppendLine(String.Format("- {0}: {1}", i, possibleChoices[i]));
             }
 
             return sb.ToString();
